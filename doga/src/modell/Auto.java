@@ -1,19 +1,21 @@
 package modell;
 
-import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class Auto {
     private String rendszam;
     private int ferohely;
     private double ar;
-    private  <List> = new List;
+    private List<Auto> autok;
 
     public Auto(String rendszam, int ferohely, double ar) {
         this.rendszam = rendszam;
         this.ferohely = ferohely;
         this.ar = ar;
+        autok = new ArrayList<>();
+        autok.add(new Auto("ABC-123",5,600000));
+        autok.add(new Auto("ABC-126",3,600000));
     }
 
     public String getRendszam() {
@@ -46,5 +48,13 @@ public class Auto {
 
     public void rndRendezes(){
 
+
     }
+
+    public void rendszamHat(){
+        Exception NemLetezoAutoException {
+
+        }
+    }
+
 }
