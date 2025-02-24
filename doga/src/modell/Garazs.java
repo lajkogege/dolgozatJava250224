@@ -1,7 +1,6 @@
 package modell;
 
 import java.util.List;
-import java.util.UUID;
 
 public class Garazs {
     private int ferhely;
@@ -25,18 +24,18 @@ public class Garazs {
     }
 
     public void garazsKi(String szin, String tulajdonos){
-        Jarmu jarmu = new Jarmu();
+        Jarmu jarmu = new Jarmu( szin,tulajdonos);
         for(Jarmu j: garazsak) {
-            garazsak.remove(new Jarmu(, szin,tulajdonos));
+            garazsak.remove(new Jarmu( szin,tulajdonos));
             setFerhely(-1);
 
         }
     }
 
     public void garazsBe(String szin, String tulajdonos){
-        Jarmu jarmu = new Jarmu();
+        Jarmu jarmu = new Jarmu( szin, tulajdonos);
         for(Jarmu j: garazsak) {
-            garazsak.add(new Jarmu(UUID.randomUUID(), szin,tulajdonos));
+            garazsak.add(new Jarmu(szin,tulajdonos));
             setFerhely(+1);
 
         }

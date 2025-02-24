@@ -6,18 +6,18 @@ import java.util.UUID;
 public class Jarmu {
     private UUID  id;
     private String szín;
-    private Tulajdonos tulajdonos;
+    private String tulajdonos;
     private List<Jarmu> jarmuvek;
 
 
-    public Jarmu() {
-    }
+    /*public Jarmu(UUID id, String szín, String tulajdonos) {
+        this();
+    }*/
 
-    public Jarmu(UUID id, String szín, String tulajdonos) {
+    public Jarmu( String szín, String tulajdonos) {
         this.id = idGenerelas();
-
         this.szín = szín;
-        this.tulajdonos = new Tulajdonos();
+        this.tulajdonos = tulajdonos;
         //jarmuvek = new ArrayList<>();
        // jarmuvek.add(new Jarmu(id,"piros","Zoli"));
         //jarmuvek.add(new Jarmu(id,"zöld", "Elek"));
@@ -32,7 +32,7 @@ public class Jarmu {
         return id;
     }
 
-    public Tulajdonos getTulajdonos() {
+    public String getTulajdonos() {
         return tulajdonos;
     }
 
@@ -48,14 +48,14 @@ public class Jarmu {
         this.id = id;
     }
 
-    public void setTulajdonosok(Tulajdonos tulajdonosok) {
+    public void setTulajdonosok(String tulajdonosok) {
         this.tulajdonos = tulajdonosok;
     }
 
-   /* @Override
+    @Override
     public Object clone() throws CloneNotSupportedException {
-        Jarmu ujJarmu = new Jarmu(this.id, this.szín,this.tulajdonos);
+        Jarmu ujJarmu = new Jarmu( szín,tulajdonos);
         return ujJarmu;
 
-    }*/
+    }
 }
