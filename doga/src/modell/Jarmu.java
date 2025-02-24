@@ -1,6 +1,5 @@
 package modell;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -10,18 +9,23 @@ public class Jarmu {
     private Tulajdonos tulajdonos;
     private List<Jarmu> jarmuvek;
 
-    public Jarmu(UUID id, String szín, String tulajdonos) {
-        this.id = id;
-        idGenerelas();
-        this.szín = szín;
-        this.tulajdonos = new Tulajdonos(tulajdonos);
-        jarmuvek = new ArrayList<>();
-        jarmuvek.add(new Jarmu(id,"piros","Zoli"));
-        jarmuvek.add(new Jarmu(id,"zöld", "Elek"));
+
+    public Jarmu() {
     }
 
-    private void idGenerelas() {
-        id = UUID.randomUUID();
+    public Jarmu(UUID id, String szín, String tulajdonos) {
+        this.id = idGenerelas();
+
+        this.szín = szín;
+        this.tulajdonos = new Tulajdonos();
+        //jarmuvek = new ArrayList<>();
+       // jarmuvek.add(new Jarmu(id,"piros","Zoli"));
+        //jarmuvek.add(new Jarmu(id,"zöld", "Elek"));
+    }
+
+    private UUID idGenerelas() {
+        return  id = UUID.randomUUID();
+
     }
 
     public UUID getId() {
@@ -48,10 +52,10 @@ public class Jarmu {
         this.tulajdonos = tulajdonosok;
     }
 
-    @Override
+   /* @Override
     public Object clone() throws CloneNotSupportedException {
-        Jarmu ujJarmu = new Jarmu(this.id, this.szín,getTulajdonos());
+        Jarmu ujJarmu = new Jarmu(this.id, this.szín,this.tulajdonos);
         return ujJarmu;
 
-    }
+    }*/
 }

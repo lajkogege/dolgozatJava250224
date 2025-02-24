@@ -1,5 +1,6 @@
 package modell;
 
+import java.lang.classfile.attribute.ExceptionsAttribute;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,9 +14,9 @@ public class Auto {
         this.rendszam = rendszam;
         this.ferohely = ferohely;
         this.ar = ar;
-        autok = new ArrayList<>();
-        autok.add(new Auto("ABC-123",5,600000));
-        autok.add(new Auto("ABC-126",3,600000));
+        //autok = new ArrayList<>();
+        //autok.add(new Auto("ABC-123",5,600000));
+       // autok.add(new Auto("ABC-126",3,600000));
     }
 
     public String getRendszam() {
@@ -50,11 +51,13 @@ public class Auto {
 
 
     }
+    public void nemLetezoutoException (){
 
-    public void rendszamHat(){
-        Exception NemLetezoAutoException {
-
-        }
     }
+    /*public void rendszamHat(){
+        Exception NemLetezoAutoException {
+            return;
+        }
+    }*/
 
 }

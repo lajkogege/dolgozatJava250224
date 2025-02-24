@@ -3,7 +3,7 @@ package modell;
 public class Tulajdonos {
     private String nev;
 
-    public Tulajdonos(String tulajdonos) {
+    public Tulajdonos() {
         this.nev = nev;
     }
 
